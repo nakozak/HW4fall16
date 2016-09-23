@@ -21,5 +21,13 @@ ActiveRecord::Schema.define(version: 20150809022253) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+  
+  create_table "users", force: :cascade do |t|
+    t.string  "user_id"
+    t.string  "email"
+    t.string  "session_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

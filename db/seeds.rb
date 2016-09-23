@@ -17,7 +17,12 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'Raiders of the Lost Ark', :rating => 'PG', :release_date => '12-Jun-1981'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
   	 ]
+users = []
 
 movies.each do |movie|
   Movie.create!(movie)
+end
+
+users.each do |user|
+    User.create!(user)
 end
