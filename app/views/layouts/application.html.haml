@@ -8,7 +8,7 @@
 
   %body
     %h1.title Rotten Potatoes!
-    =button_to 'Login/Sign up',new_user_path, :method =>:get
+    =button_to 'Sign up/Login',new_user_path, :method =>:get
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]
