@@ -1,15 +1,19 @@
--#  This file is app/views/users/index.html.haml
-%h1 Users
+-#  This file is app/views/movies/index.html.haml
+%h1 All Movies
 
 %table#movies
   %thead
     %tr
-      %th User ID
-      %th User Email
-      %th Session Token
+      %th Movie Title
+      %th Rating
+      %th Release Date
+      %th More Info
   %tbody
-    - @users.each do |user|
+    - @movies.each do |movie|
       %tr
-        %td= user.user_id 
-        %td= user.email
-        %td= user.session_token
+        %td= movie.title 
+        %td= movie.rating
+        %td= movie.release_date
+        %td= link_to "More about #{movie.title}", movie_path(movie)
+
+= link_to 'Add new movie', new_movie_path
