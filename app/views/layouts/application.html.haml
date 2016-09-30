@@ -8,13 +8,13 @@
   %body
     %h1.title Rotten Potatoes!
     #main
-      - if flash[:notice]
-        #notice.message= flash[:notice]
-      - elsif flash[:warning]
-        #warning.message= flash[:warning]
       - if !@current_user
-        = button_to 'Sign up/Login', login_path, :method => :get, :id => 'signuplogin'
+        =button_to 'Sign up/Login', login_path, :method => :get, :id => 'signuplogin'
       - else
-        = button_to 'Logout', logout_path, :method => :delete, :id => 'logout'
+        =button_to 'Logout', logout_path, :method => :delete, :id => 'logout'
+      - if flash[:notice]
+        #notice.flash_message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.flash_message= flash[:warning]
         
       = yield
