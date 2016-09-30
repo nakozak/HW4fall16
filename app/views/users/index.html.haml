@@ -1,0 +1,15 @@
+-#  This file is app/views/users/index.html.haml
+%h1 Users
+
+%table#users
+  %thead
+    %tr
+      %th User ID
+      %th User Email
+      %th Session Token
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.user_id 
+        %td= user.email
+        %td= user.session_token
