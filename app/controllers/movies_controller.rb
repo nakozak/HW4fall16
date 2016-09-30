@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  
+  #Sets the current user based on their session token
   before_filter :set_current_user
   
   def movie_params

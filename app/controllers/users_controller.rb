@@ -5,14 +5,14 @@ class UsersController < ApplicationController
   end
   
   def new
-    # default: render 'new' template
   end
   
   def edit
   end
   
   def create
-      #adds a session token  to the account
+    #Creates new user based on the user+params defined above
+    #Checks to see if the user id is registered before sign up
     @user = params[:user_id]
     if(User.exists?(:user_id => user_params[:user_id]))
       flash[:notice]  = "Sorry, this user-id is taken."
