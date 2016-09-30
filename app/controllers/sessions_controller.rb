@@ -26,6 +26,6 @@ class SessionsController < ApplicationController
     #Reset the session
     flash[:notice] ="Logged Out"
     session[:session_token] = nil
-    redirect_to movies_path
+    redirect_to login_path
   end
 end    
